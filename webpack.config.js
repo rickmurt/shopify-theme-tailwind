@@ -23,7 +23,7 @@ module.exports = {
   },
   plugins: [new MiniCssExtractPlugin({
     filename: (pathData) => {
-      return pathData.chunk.name === 'index' ? 'shopify-accelerator.css' : '[name].css';
+      return pathData.chunk.name === 'index' ? 'redox.css' : '[name].css';
     }
   })]
 };
