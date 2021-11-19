@@ -21,14 +21,18 @@
   
       {{ content_for_header }}
 
-      {{ 'shopify-accelerator.css' | asset_url | stylesheet_tag }}
+      {{ 'redox.css' | asset_url | stylesheet_tag }}
 
       <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
     </head>
 
     <body>
+      {% section 'header' %}
+
       <main id="MainContent" class="" role="main" tabindex="-1">
         {{ content_for_layout }}
       </main>
+
+      {% section 'footer' %}
     </body>
   </html>
