@@ -14,6 +14,7 @@
         {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
         {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
       </title>
+      <link rel="icon" type="image/x-icon" href="{{ 'favicon.png' | asset_url }}">
   
       {% if page_description %}
         <meta name="description" content="{{ page_description | escape }}">
@@ -22,6 +23,11 @@
       {{ content_for_header }}
 
       {{ 'redox.css' | asset_url | stylesheet_tag }}
+      <style>
+        html {
+          scroll-behavior: smooth;
+        }
+      </style>
 
       <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
     </head>
